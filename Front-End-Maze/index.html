@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <head></head>
+    <body>
+        <!-- 测试cilcik的不同事件绑定方式 -->
+        <input type="button" value="onclick1" onclick="click1()"/>
+        <input type="button" value="onclick2" id="click2" class="inputs1"/>
+        <input type="button" value="onclick3" id="click3" class="inputs1"/>
+        <nav>123456</nav>
+    </body>
+    <script>
+        function click1 (){
+            alert("first click");
+        }
+        window.onload = function(){[]
+            var button2 = document.getElementById("click2");``
+            var button3 = document.getElementById("click3");
+            button2.onclick = function(){
+                alert("first click");
+            }
+            button2.onclick = function(){
+                alert("second click");
+            }
+
+            button3.addEventListener('click',function(){
+                alert("first click");
+            })
+            button3.addEventListener('click',function(){
+                alert("second click");
+            })
+
+            let set1 = new Set([8,1,2,3,3,4,4,5,{'a':'1'},{'a':'1'},[0,1],[0,1]]);
+            var arr1 = new Array(8,1,2,3,3,4,4,5,{'a':'1'},{'a':'1'},[0,1],[0,1]);
+            var obj1 = new Object({"4":"4","3":"3","2":"2","1":"1"});
+            var arr2 = new Array("4","3","2","1");
+            // console.log(set1);
+            // console.log(...set1);
+            // set1.forEach((value,key)=>{
+            //     console.log(value);
+            //     console.log(key);
+            // })
+            // arr1.forEach((arr,index)=>{
+            //     console.log(arr);
+            // })
+            // for(var i =0; i<arr1.length; i++){
+            //     if(i===3){
+            //         break;
+            //     }
+            //     console.log(arr1[i]);
+            // }
+            for(var index in arr2){
+                console.log(`${index}  :  ${arr2[index]}`);
+            }
+            for(var index in obj1){
+                console.log(`${index}  :  ${obj1[index]}`);
+            }
+            // for(var arr of arr1){
+            //     console.log(arr);
+            // }
+        }
+    </script>
+</html>

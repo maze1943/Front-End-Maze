@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head></head>
+
+<body>
+
+    <nav>123456</nav>
+</body>
+<script>
+    window.onload = function () {
+        // // let及const不可重复声明
+        // var a = "1";
+        // var a = "2";
+        // let b = "1";
+        // let b = "2";
+        // const c = "1";
+        // const c = "2";
+        // console.log(`var a = ${a} , let b = ${b} , const c = ${c} `);//报错Uncaught SyntaxError: Identifier 'c' has already been declared
+
+        // //let及const不存在变量提升
+        // console.log(`var aa = ${aa} , let bb = ${bb} , const cc = ${cc} `);//报错Uncaught ReferenceError: Cannot access 'bb' before initialization
+        // var aa = "1";
+        // let bb = "2";
+        // const cc = "3";
+
+        // //let及const存在块级作用域
+        // if(1){
+        //     var aaa = "1";
+        //     let bbb = "2";
+        //     const ccc = "3";
+        // }
+        // console.log(`var aaa = ${aaa} , let bbb = ${bbb} , const ccc = ${ccc} `);//报错Uncaught ReferenceError: bbb is not defined
+
+        // //const必须赋初始值，且不允许改变值
+        // const cccc;
+        // console.log(`const cccc = ${cccc}`);//报错Uncaught SyntaxError: Missing initializer in const declaration
+        // const ccccc = "1";
+        // ccccc = "2";
+        // console.log(`const ccccc = ${ccccc}`);//报错Uncaught TypeError: Assignment to constant variable.
+        // const ccccc = {"constKey":"1"};
+        // ccccc.constKey = "2";//引用类型存储的是指针，修改对象的属性不修改地址指针，所以是被允许的
+        // console.log(`const ccccc = ${ccccc}`);//输出 const ccccc = [object Object]
+
+    }
+</script>
+
+</html>

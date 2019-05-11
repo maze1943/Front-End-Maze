@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head></head>
+
+<body>
+
+</body>
+<script>
+    // ES5中数组方法演示
+    window.onload = function () {
+        //TODO every(): 数组中的元素全部满足指定条件返回true
+        var checknum = [15, 3, 2, 6, 7, 1, 9, 10];
+        var checkresult = checknum.every(function (item, index, array) {
+            return item > 1;
+        });
+        //运行结果为false
+        alert(checkresult);
+
+        //TODO some(): 数组中的元素部分满足指定条件返回true
+        var checknum = [15, 3, 2, 6, 7, 1, 9, 10];
+        var checkresult = checknum.some(function (item, index, array) {
+            return item > 15;
+        });
+        //运行结果为false
+        alert(checkresult);
+
+        //TODO filter(): 把符合条件的项目组成一个新的数组
+        var checknum = [15, 3, 2, 6, 7, 1, 9, 10];
+        var checkresult = checknum.filter(function (item, index, array) {
+            return item > 3;
+        });
+        checkresult.forEach(function (value, index, array) {
+            //运行结果为15 6 7 9 10
+            console.log(value);
+        });
+
+        //TODO map(): 对数组元素进行运算并将运算结果
+        var checknum = [15, 3, 2, 6, 7, 1, 9, 10];
+        var checkresult = checknum.map(function (value, index, array) {
+            return '新值：' + parseInt(value + 1);
+        });
+        checkresult.forEach(function (value, index, array) {
+            //运行结果为原数组每个元素+1
+            console.log(value);
+        })
+
+        //TODO reduce(): 对数组元素依次做累加操作，返回最后一个操作后结果（reduceRight方法为从右向左方向）
+        // reduce可在回调函数后传入initialValue参数，作为初始的pre值
+        // 后续计算依次将前一次计算得到的值，作为下一次计算的pre值
+        // ****************** reduce用法示例1 : 求元素中最大值 ******************
+        var checknum = [15, 3, 2, 6, 7, 1, 9, 10];
+        var checkresult = checknum.reduce(function (pre, cur) {
+            return pre > cur ? pre : cur;
+        });
+        //运行结果为数组最大值15
+        console.log(checkresult);
+        // ****************** reduce用法示例2 : 累加元素 ******************
+        // var checkresult = checknum.reduce(function (pre, cur) {
+        //     return pre + cur;
+        // });
+        // //运行结果为数组累加值53
+        // console.log(checkresult);
+        // ****************** reduce用法示例3 : 扁平化数组 ******************
+        // var checknum = [[15, 3], [2, 6, 7], [1, 9, 10]];
+        // var checkresult = checknum.reduce(function (pre, cur) {
+        //     return pre.concat(cur);
+        // });
+        // //运行结果为新数组[15, 3, 2, 6, 7, 1, 9, 10];
+        // console.log(checkresult);
+
+    }
+</script>
+
+</html>
