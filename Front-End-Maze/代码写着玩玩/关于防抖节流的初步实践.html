@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .IntroduceDiv {
+            width: 400px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>关于防抖节流，当频繁触发事件时，响应会跟不上事件触发频率，类似onscroll、onmousemove等事件，会在瞬时高频触发，如果事件的回调处理函数较为复杂(例如复杂的DOM操作会消耗昂贵的内存和cpu性能)，则有可能导致页面卡顿假死。而节流（throttling）和防抖（debounce）为我们提供了两种解决此类问题的方案，目的就是为了减少事件无用的触发次数以避免资源浪费
+    </p>
+    <P>防抖有两种思路<br>
+        1.为事件设定一个延时周期，在延迟周期内触发，则重新开始延迟，直到周期结束再触发回调事件<br>
+        2.前置防抖，执行事件在前，然后开始延迟周期，若周期内再次触发，则重新开始延迟
+    </P>
+    <div class="IntroduceDiv">
+        <p id="firstCount">0</p>
+        <button id="noDeboundBtn">点击计数</button>
+    </div>
+    <div class="IntroduceDiv">
+        <p id="secondCount">0</p>
+        <button id="deboundBtn">点击计数（防抖）</button>
+        <button id="preDeboundBtn">点击计数（前置防抖）</button>
+    </div><br>
+    <p>节流的思路，是控制指定时间内触发事件的次数</p>
+    <div class="IntroduceDiv">
+        <p id="thirdCount">0</p>
+        <button id="throttleBtn">点击计数（节流）</button>
+    </div>
+    <button id="resetBtn">重置</button>
+</body>
+<script>
+    let firstCount = document.getElementById("firstCount"),
+        noDeboundBtn = document.getElementById("noDeboundBtn"),
+        secondCount = document.getElementById("secondCount"),
+        deboundBtn = document.getElementById("deboundBtn");
+    predeboundBtn = document.getElementById("preDeboundBtn"),
+        resetBtn = document.getElementById("resetBtn"),
+        throttleBtn = document.getElementById("throttleBtn"),
+        thirdCount = document.getElementById("thirdCount");
+    let i = 0,
+        j = 0,
+        k = 0;
+    let timer, countFunc1, countFunc2, countFunc3;
+    let executeFlag = true; // 前置节流时标识是否可以执行函数
+
+    // 回调事件，当触发时元素数值+1
+    countFunc1 = () => {
+        i++;
+        firstCount.innerHTML = i;
+    }
+    countFunc2 = () => {
+        j++;
+        secondCount.innerHTML = j;
+    }
+
+    // 没有防抖处理，每次点击都会触发计数事件
+    noDeboundBtn.addEventListener("click", () => {
+        countFunc1();
+    })
+    // 防抖处理，设置500ms延迟周期，每次点击重新开始延迟周期，直到延迟周期结束时触发计数事件
+    let deboundTimeout = () => {
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(() => {
+            countFunc2();
+        }, 500)
+    }
+    // 前置防抖
+    let preDeboundTimeout = () => {
+        if (executeFlag) {
+            executeFlag = false;
+            countFunc2();
+        }
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(() => {
+            executeFlag = true;
+        }, 500)
+    }
+    deboundBtn.addEventListener("click", deboundTimeout)
+    preDeboundBtn.addEventListener("click", preDeboundTimeout)
+    resetBtn.addEventListener("click", () => {
+        firstCount.innerHTML = "0";
+        secondCount.innerHTML = "0";
+        thirdCount.innerHTML = "0";
+        i = 0;
+        j = 0;
+        k = 0;
+        TimeStamp = 0;
+    })
+
+    // 节流处理，计算两次执行期间时间间隔是否大于节流间隔，大于则执行，否则不执行
+    countFunc3 = () => {
+        k++;
+        thirdCount.innerHTML = k;
+    }
+    let TimeStamp = 0;
+    let throttleFunc = () => {
+        let nowTime = Date.now();
+        if (nowTime - TimeStamp > 500) {
+            countFunc3();
+            TimeStamp = nowTime; // 每次执行后，记录本次执行时间戳，若下次执行时间已超过节流间隔，则可以执行
+        }
+    }
+    throttleBtn.addEventListener("click", throttleFunc);
+</script>
+
+</html>

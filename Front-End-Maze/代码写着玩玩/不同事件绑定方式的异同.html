@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head></head>
+    <body>
+        <!-- 测试cilcik的不同事件绑定方式 -->
+        <input type="button" value="onclick1" onclick="click1()"/>
+        <input type="button" value="onclick2" id="click2" class="inputs1"/>
+        <input type="button" value="onclick3" id="click3" class="inputs1"/>
+        <nav>123456</nav>
+    </body>
+    <script>
+        function click1 (){
+            alert("first click");
+        }
+        window.onload = function(){[]
+            var button2 = document.getElementById("click2");``
+            var button3 = document.getElementById("click3");
+            button2.onclick = function(){
+                alert("first click");
+            }
+            button2.onclick = function(){
+                alert("second click");
+            }
+
+            button3.addEventListener('click',function(){
+                alert("first click");
+            })
+            button3.addEventListener('click',function(){
+                alert("second click");
+            })
+        }
+    </script>
+</html>
