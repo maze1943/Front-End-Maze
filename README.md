@@ -8,7 +8,7 @@
 ```
 
 ## 目录
-[读书笔记系列](https://maze1943.github.io/Front-End-Maze/读书笔记/你不知道的javascript读书笔记/README.md)<br/>
+[读书笔记系列](https://maze1943.github.io/Front-End-Maze/读书笔记/README.md)<br/>
 [随便聊聊]()<br/>
 [前端迷宫-javascript篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/README.md)<br/>
 [前端迷宫-html篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/README.md)（计划中）<br/>
