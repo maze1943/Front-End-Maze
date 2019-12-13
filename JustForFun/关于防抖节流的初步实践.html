@@ -39,8 +39,8 @@
     let firstCount = document.getElementById("firstCount"),
         noDeboundBtn = document.getElementById("noDeboundBtn"),
         secondCount = document.getElementById("secondCount"),
-        deboundBtn = document.getElementById("deboundBtn");
-    predeboundBtn = document.getElementById("preDeboundBtn"),
+        deboundBtn = document.getElementById("deboundBtn"),
+        predeboundBtn = document.getElementById("preDeboundBtn"),
         resetBtn = document.getElementById("resetBtn"),
         throttleBtn = document.getElementById("throttleBtn"),
         thirdCount = document.getElementById("thirdCount");
@@ -128,7 +128,7 @@
                 let interval = now - startTimeStamp
                 if (interval <
                     timerInterval
-                    ) { // the timer start time has been reset，so the interval is less than timerInterval
+                ) { // the timer start time has been reset，so the interval is less than timerInterval
                     console.log('debounce reset', timerInterval - interval);
                     startTimeStamp = now;
                     run(timerInterval - interval); // reset timer for left time 
