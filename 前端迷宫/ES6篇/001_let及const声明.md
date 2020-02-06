@@ -5,6 +5,8 @@
 阮一峰《ES6标准入门》（第三版）；
 https://www.youtube.com/watch?v=5s35h_6v4ZI&list=PLCRqr1mERvdJ0IZMD1U4oSB7k0gyAjyIx
 
+[toc]
+
 ## 01 var、let、const
 
 ### 01.1 块级作用域
