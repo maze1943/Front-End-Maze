@@ -18,6 +18,9 @@
 04 [函数的拓展](https://maze1943.github.io/Front-End-Maze/前端迷宫/ES6篇/004_函数的拓展)<br/>
 05 [数组的拓展](https://maze1943.github.io/Front-End-Maze/前端迷宫/ES6篇/005_数组的拓展)<br/>
 06 [对象的拓展](https://maze1943.github.io/Front-End-Maze/前端迷宫/ES6篇/006_对象的拓展)<br/>
+07 [Symbol](https://maze1943.github.io/Front-End-Maze/前端迷宫/ES6篇/007_Symbol)<br/>
+08 [Set和Map](https://maze1943.github.io/Front-End-Maze/前端迷宫/ES6篇/008_Set和Map)<br/>
+09 [Proxy](https://maze1943.github.io/Front-End-Maze/前端迷宫/ES6篇/009_Proxy)<br/>
 
 ## html篇
 
