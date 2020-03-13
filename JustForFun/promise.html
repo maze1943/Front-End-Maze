@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="./手写Promise.js"></script>
+<script>
+    let promise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve('OK');
+        },2000);
+        console.log('promise');
+    });
+
+    promise.then((value)=>{
+        console.log('onresolved1',value);
+    },(reason)=>{
+        console.log('onrejected1',reason);
+    });
+
+    promise.then((value)=>{
+        console.log('onresolved2',value);
+    },(reason)=>{
+        console.log('onrejected2',reason);
+    });
+</script>
+</html>
