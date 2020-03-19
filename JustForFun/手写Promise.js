@@ -1,4 +1,8 @@
 (function (window) {
+    // 1.定义Promise构造函数
+    // 2.Promise.then
+
+
     const Promise = function (excutor) {
         const that = this;
         //初始化promise状态为pending
@@ -10,8 +14,9 @@
 
         //执行器参数，修改状态为resolved，异步调用成功回调
         function resolve(value) {
-            if (this.status != "pending") return;
+            if (that.status != "pending") return;
             that.status = "resolved";
+            that.data = value;
             if (that.callbacks.length > 0) {
                 //异步执行回调
                 setTimeout(() => {
@@ -23,8 +28,9 @@
         }
         //执行器参数，修改状态为rejeted，异步调用失败回调
         function reject(reason) {
-            if (this.status != "pending") return;
+            if (that.status != "pending") return;
             that.status = "rejected";
+            that.data = reason;
             if (that.callbacks.length > 0) {
                 //异步执行回调
                 setTimeout(() => {
@@ -40,11 +46,47 @@
 
     //同步指定回调函数，promise状态改变之后异步执行回调
     Promise.prototype.then = function (onresolved, onrejected) {
-        this.callbacks.push({
-            'onresolved': onresolved,
-            'onrejected': onrejected
-        });
+        var that = this;
+        return new Promise((resolve, reject) => {
+            if (that.status === "resolved") {
+                try {
+                    onresolved = typeof (onresolved) === 'function' ? onresolved : function () { };
+                    let result = onresolved();
+                    if (result instanceof Promise) {
+                        result.then((value)=>{
 
+                        },(reason)=>{
+                            
+                        });
+                    } else {
+                        resolve(result);
+                    }
+                } catch (error) {
+                    reject(error);
+                }
+            } else if (that.status === "rejected") {
+                try {
+                    onrejected = typeof (onrejected) === 'function' ? onrejected : function () { };
+                    let result = onrejected();
+                    if (result instanceof Promise) {
+                        result.then((value)=>{
+
+                        },(reason)=>{
+
+                        });
+                    } else {
+                        resolve(result);
+                    }
+                } catch (error) {
+                    reject(error);
+                }
+            } else {
+                that.callbacks.push({
+                    'onresolved': onresolved,
+                    'onrejected': onrejected
+                });
+            }
+        })
     }
     //同步指定失败回调，promise失败之后异步执行回调
     Promise.prototype.catch = function (onrejected) {
