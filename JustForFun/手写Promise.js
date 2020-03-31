@@ -6,11 +6,11 @@
     const Promise = function (excutor) {
         const that = this;
         //初始化promise状态为pending
-        this.status = "pending";
+        that.status = "pending";
         //存储执行器返回数据
-        this.data = undefined;
+        that.data = undefined;
         //存储回调{onresolve,onreject}列表
-        this.callbacks = [];
+        that.callbacks = [];
 
         //执行器参数，修改状态为resolved，异步调用成功回调
         function resolve(value) {

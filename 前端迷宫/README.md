@@ -6,6 +6,11 @@
 02 [一道面试题的引申——关于parseInt](https://maze1943.github.io/Front-End-Maze/前端迷宫/javascript篇/002_一道面试题的引申)<br/>
 03 [浅谈函数柯里化](https://maze1943.github.io/Front-End-Maze/前端迷宫/javascript篇/003_浅谈函数柯里化)<br/>
 
+## angular1.X篇
+01 [MVC与MVVM](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/001_MVC与MVVM)<br/>
+02 [事件广播$emit、$broadcast、$on](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/002_事件广播$emit、$broadcast、$on)<br/>
+02 [$scope的生命周期](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/003_$scope的生命周期)<br/>
+
 ## CSS篇
 
 01 [css预处理less](https://maze1943.github.io/Front-End-Maze/前端迷宫/css篇/001_css预处理Less)<br/>
