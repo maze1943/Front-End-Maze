@@ -15,4 +15,4 @@
 [前端迷宫-html篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
 [前端迷宫-css篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
 [前端迷宫-node.js篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
-[前端迷宫-angular篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
+[前端迷宫-angular1.X篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>

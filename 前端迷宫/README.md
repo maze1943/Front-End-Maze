@@ -9,7 +9,8 @@
 ## angular1.X篇
 01 [MVC与MVVM](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/001_MVC与MVVM)<br/>
 02 [事件广播$emit、$broadcast、$on](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/002_事件广播$emit、$broadcast、$on)<br/>
-02 [$scope的生命周期](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/003_$scope的生命周期)<br/>
+03 [$scope的生命周期](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/003_$scope的生命周期)<br/>
+04 [指令directive概览](https://maze1943.github.io/Front-End-Maze/前端迷宫/angular1.X篇/004_指令directive概览.md)<br/>
 
 ## CSS篇
 
