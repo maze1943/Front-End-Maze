@@ -12,7 +12,7 @@
 [读书笔记系列](https://maze1943.github.io/Front-End-Maze/读书笔记/)<br/>
 [随便聊聊]()<br/>
 [前端迷宫-javascript篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)<br/>
-[前端迷宫-html篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
-[前端迷宫-css篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
-[前端迷宫-node.js篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
-[前端迷宫-angular1.X篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)（计划中）<br/>
+[前端迷宫-html篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)<br/>
+[前端迷宫-css篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)<br/>
+[前端迷宫-node.js篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)<br/>
+[前端迷宫-angular1.X篇](https://maze1943.github.io/Front-End-Maze/前端迷宫/)<br/>
